@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans">
+
+    <bean name="homeController"
+          class="com.my.controller.spring.HomeController">
+    </bean>
+
+    <bean name="orderController"
+          class="com.my.controller.spring.OrderController">
+    </bean>
+
+    <bean name="ordersController"
+          class="com.my.controller.spring.OrdersController">
+    </bean>
+
+    <bean name="categoryController"
+          class="com.my.controller.spring.CategoryController">
+    </bean>
+
+    <bean name="productController"
+          class="com.my.controller.spring.ProductController">
+    </bean>
+
+    <bean name="signInController"
+          class="com.my.controller.spring.SignInController">
+    </bean>
+
+    <bean name="signUpController"
+          class="com.my.controller.spring.SignUpController">
+    </bean>
+
+    <bean name="cartController"
+          class="com.my.controller.spring.CartController">
+    </bean>
+
+    <bean id="simpleUrlMapping"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/">homeController</prop>
+                <prop key="/cart">cartController</prop>
+                <prop key="/category/id/*">categoryController</prop>
+                <prop key="/order/id/*">orderController</prop>
+                <prop key="/orders">ordersController</prop>
+                <prop key="/product/id/*">productController</prop>
+                <prop key="/signin">signInController</prop>
+                <prop key="/signup">signUpController</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
