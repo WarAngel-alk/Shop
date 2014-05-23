@@ -6,7 +6,7 @@
 
     <module id="Shop-Web">
         <web>
-            <web-uri>web.war</web-uri>
+            <web-uri>shop.war</web-uri>
             <context-root>ShopWeb</context-root>
         </web>
     </module>
