@@ -34,11 +34,12 @@ public class Order {
     @OneToMany(fetch = FetchType.EAGER)
     private List<OrderItem> orderItems;
 
-    public Order() {
+    Order() {
         orderItems = new ArrayList<>();
     }
 
     Order(Date date, long totalPrice, User owner, List<OrderItem> orderItems) {
+        this();
         this.date = date;
         this.totalPrice = totalPrice;
         this.owner = owner;

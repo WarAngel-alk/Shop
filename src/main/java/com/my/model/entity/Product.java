@@ -22,17 +22,22 @@ public class Product {
     @Column(nullable = false)
     private long price;
 
+    @Column(nullable = false)
+    private int amount;
+
     @Column(nullable = true, length = 200)
     private String picturePath;
 
     @Column(nullable = true)
     private String description;
 
-    @Column(nullable = false)
-    private int amount;
+    Product() {}
 
-    public Product() {
-
+    public Product(String name, long price, int amount) {
+        this();
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
     }
 
     public long getId() {

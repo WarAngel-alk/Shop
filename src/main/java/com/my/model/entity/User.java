@@ -41,15 +41,15 @@ public class User {
     @OneToMany
     private Set<Order> orders;
 
-    public User() {
+    User() {
         orders = new TreeSet<>();
     }
 
     public User(String login, String password, String email) {
+        this();
         this.login = login;
         this.password = password;
         this.email = email;
-        orders = new TreeSet<>();
     }
 
     public long getId() {

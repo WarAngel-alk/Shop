@@ -30,8 +30,13 @@ public class Category {
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Product> products;
 
-    public Category() {
+    Category() {
         products = new TreeSet<>();
+    }
+
+    public Category(String name) {
+        this();
+        this.name = name;
     }
 
     public long getId() {
