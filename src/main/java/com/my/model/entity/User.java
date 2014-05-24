@@ -3,8 +3,8 @@ package com.my.model.entity;
 import com.my.model.entity.order.Order;
 
 import javax.persistence.*;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,10 +39,10 @@ public class User {
     private String telephone;
 
     @OneToMany
-    private Set<Order> orders;
+    private List<Order> orders;
 
     User() {
-        orders = new TreeSet<>();
+        orders = new ArrayList<>();
     }
 
     public User(String login, String password, String email) {
@@ -108,11 +108,11 @@ public class User {
         this.telephone = telephone;
     }
 
-    public Set<Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(Set<Order> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 }

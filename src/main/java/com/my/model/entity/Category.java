@@ -1,8 +1,8 @@
 package com.my.model.entity;
 
 import javax.persistence.*;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,10 +28,10 @@ public class Category {
     private String description;
 
     @OneToMany(fetch = FetchType.LAZY)
-    private Set<Product> products;
+    private List<Product> products;
 
     Category() {
-        products = new TreeSet<>();
+        products = new ArrayList<>();
     }
 
     public Category(String name) {
@@ -71,11 +71,11 @@ public class Category {
         this.description = description;
     }
 
-    public Set<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(Set<Product> products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 }
