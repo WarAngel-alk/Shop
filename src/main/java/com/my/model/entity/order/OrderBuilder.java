@@ -1,5 +1,6 @@
 package com.my.model.entity.order;
 
+import com.my.model.entity.Product;
 import com.my.model.entity.User;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class OrderBuilder {
 
     private Date date;
     private User owner;
-    private List<OrderItem> orderItems;
+    private List<Order.OrderItem> orderItems;
 
     public OrderBuilder() {
         orderItems = new ArrayList<>();
@@ -33,8 +34,8 @@ public class OrderBuilder {
         return this;
     }
 
-    public OrderBuilder addOrderItem(OrderItem oi) {
-        orderItems.add(oi);
+    public OrderBuilder addOrderItem(Product product, int amount) {
+        orderItems.add(new Order.OrderItem(product, amount));
         return this;
     }
 
@@ -50,7 +51,7 @@ public class OrderBuilder {
         }
 
         long totalPrice = 0;
-        for(OrderItem oi : orderItems) {
+        for(Order.OrderItem oi : orderItems) {
             totalPrice += oi.getProduct().getPrice() * oi.getAmount();
         }
 
