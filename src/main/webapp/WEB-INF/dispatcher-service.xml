@@ -52,6 +52,9 @@
                 <prop key="/product/id/*">productController</prop>
                 <prop key="/signin">signInController</prop>
                 <prop key="/signup">signUpController</prop>
+
+                <!--default-->
+                <prop key="/">homeController</prop>
             </props>
         </property>
     </bean>
