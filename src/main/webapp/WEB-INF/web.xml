@@ -11,6 +11,11 @@
         <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/js/*</url-pattern>
+        <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
@@ -46,8 +51,5 @@
             <include-prelude>/WEB-INF/jspf/side.jspf</include-prelude>
         </jsp-property-group>
     </jsp-config>
-    <welcome-file-list>
-        <welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
-    </welcome-file-list>
 
 </web-app>

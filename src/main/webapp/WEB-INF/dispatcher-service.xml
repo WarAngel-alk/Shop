@@ -44,7 +44,7 @@
           class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="/">homeController</prop>
+                <prop key="/home">homeController</prop>
                 <prop key="/cart">cartController</prop>
                 <prop key="/category/id/*">categoryController</prop>
                 <prop key="/order/id/*">orderController</prop>
