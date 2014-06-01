@@ -43,6 +43,7 @@
             <include-coda>/WEB-INF/jspf/footer.jspf</include-coda>
         </jsp-property-group>
         <jsp-property-group>
+            <description>side-bar</description>
             <url-pattern>/WEB-INF/jsp/category.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/cart.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/product.jsp</url-pattern>
