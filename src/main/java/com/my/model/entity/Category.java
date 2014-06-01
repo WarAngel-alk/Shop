@@ -30,6 +30,9 @@ public class Category {
     @OneToMany(fetch = FetchType.LAZY)
     private List<Product> products;
 
+    @ManyToOne(optional = true, targetEntity = Category.class)
+    private Category superCategory;
+
     Category() {
         products = new ArrayList<>();
     }
