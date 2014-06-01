@@ -40,6 +40,11 @@
           class="com.my.controller.spring.CartController">
     </bean>
 
+    <bean name="logoutController"
+          class="com.my.controller.spring.LogoutController">
+    </bean>
+
+
     <bean id="simpleUrlMapping"
           class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
@@ -52,6 +57,7 @@
                 <prop key="/product/id/*">productController</prop>
                 <prop key="/signin">signInController</prop>
                 <prop key="/signup">signUpController</prop>
+                <prop key="/logout">logoutController</prop>
 
                 <!--default-->
                 <prop key="/">homeController</prop>
